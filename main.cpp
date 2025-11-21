@@ -2,34 +2,57 @@
 using namespace std;
 
 int main() {
-    double FirstNumber;
-    double SecondNumber;
+    double firstNumber;
+    double secondNumber;
+    char operation;
 
 
     cout << "====CALCULATOR====" << endl;
     cout << "Enter first number: ";
-    cin >> FirstNumber;
+    cin >> firstNumber;
 
     if (cin.fail()) {
         cout << "Error ocurred!" << endl;
         cin.clear();
         cin.ignore(1000, '\n');
         return 1;
-    } else {
-        // for later
     }
 
     cout << "Enter second number: ";
-    cin >> SecondNumber;
+    cin >> secondNumber;
 
     if (cin.fail()) {
         cout << "Error ocurred!" << endl;
         cin.clear();
         cin.ignore(1000, '\n');
         return 1;
-    } else {
-        // for later
     }
 
-    cout << "Your numbers: " << FirstNumber << " and " << SecondNumber << endl;
+    cout << "Your numbers: " << firstNumber << " and " << secondNumber << endl;
+    cout << "Which operation would you like?(+, -, *, /): ";
+    cin >> operation;
+
+    switch (operation) {
+        double result;
+
+        case '+':
+            result = firstNumber + secondNumber;
+            cout << result << endl;
+            break;
+        case '-':
+            result = firstNumber - secondNumber;
+            cout << result << endl;
+            break;
+        case '*':
+            result = firstNumber * secondNumber;
+            cout << result << endl;
+            break;
+        case '/':
+            result = firstNumber / secondNumber;
+            cout << result << endl;
+            break;
+        default:
+            cout << "Invalid operation!" << endl;
+            break;
+    }
 }
