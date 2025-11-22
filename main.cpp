@@ -37,19 +37,24 @@ int main() {
 
         case '+':
             result = firstNumber + secondNumber;
-            cout << result << endl;
+            cout << "Result: " << result << endl;
             break;
         case '-':
             result = firstNumber - secondNumber;
-            cout << result << endl;
+            cout << "Result: " << result << endl;
             break;
         case '*':
             result = firstNumber * secondNumber;
-            cout << result << endl;
+            cout << "Result: " << result << endl;
             break;
         case '/':
-            result = firstNumber / secondNumber;
-            cout << result << endl;
+            if (secondNumber == 0) {
+                cout << "Result: " << "Infinity" << endl;
+            } else {
+                result = firstNumber / secondNumber;
+                cout << "Result: " << result << endl;
+                break;
+            }
             break;
         default:
             cout << "Invalid operation!" << endl;
